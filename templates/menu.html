@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>NAPALM Web App</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/template.css') }}">
+ </head>
+ <body>
+      <div class="container">
+        <h1>NAPALM Web App</h1>
+        <div class="input">
+            <h3>Please provide the below input values before executing the NAPALM getters</h3>
+            <strong><nav>
+                <ul class="menu">
+                  <form method="POST" action="" autocomplete="on">
+                      <label for="ndriver">Network Driver:</label><br>
+                      <input type="text" id="ndriver" name="ndriver" autocomplete="on"><br><br>
+                      <label for="hname">Host Name:</label><br>
+                      <input type="text" id="hname" name="hname"><br><br>
+                      <label for="uname">User Name:</label><br>
+                      <input type="text" id="uname" name="uname"><br><br>
+                      <label for="pwd">Password:</label><br>
+                      <input type="password" id="pwd" name="pwd"><br><br>
+                      <label for="port">Port Number:</label><br>
+                      <input type="number" id="port" name="port"><br><br>
+
+                      <label for="route">IP Address to find route (get_route_to/traceroute):</label><br>
+                      <input type="text" id="route" name="route"><br><br>
+                      <label for="protocol">Protocol (get_route_to):</label><br>
+                      <input type="text" id="protocol" name="protocol"><br><br><br>
+                </ul>
+            </nav></strong>
+        </div>
+        <div class="submit">
+              <h3>Please click on below getters to get the respective results</h3>
+              <ul>
+                      <input type="submit" formaction="/get_facts" value="get_facts">
+                      <input type="submit" formaction="/get_interfaces" value="get_interfaces"> <br><br>
+                      <input type="submit" formaction="/get_interfaces_counters" value="get_interfaces_counters">
+                      <input type="submit" formaction="/get_interfaces_ip" value="get_interfaces_ip"> <br><br>
+                      <input type="submit" formaction="/get_arp_table" value="get_arp_table">
+                      <input type="submit" formaction="/get_mac_address_table" value="get_mac_address_table"> <br><br>
+                      <input type="submit" formaction="/get_environment" value="get_environment">
+                      <input type="submit" formaction="/get_users" value="get_users"> <br><br>
+                      <input type="submit" formaction="/get_ntp_peers" value="get_ntp_peers">
+                      <input type="submit" formaction="/get_ntp_servers" value="get_ntp_servers"> <br><br>
+                      <input type="submit" formaction="/get_ntp_stats" value="get_ntp_stats">
+                      <input type="submit" formaction="/is_alive" value="is_alive"> <br><br>
+
+                      <input type="submit" formaction="/get_bgp_config" value="get_bgp_config">
+                      <input type="submit" formaction="/get_bgp_neighbors" value="get_bgp_neighbors"> <br><br>
+                      <input type="submit" formaction="/get_bgp_neighbors_detail" value="get_bgp_neighbors_detail">
+                      <input type="submit" formaction="/get_lldp_neighbors" value="get_lldp_neighbors"> <br><br>
+                      <input type="submit" formaction="/get_lldp_neighbors_detail" value="get_lldp_neighbors_detail">
+                      <input type="submit" formaction="/get_probes_config" value="get_probes_config"> <br><br>
+                      <input type="submit" formaction="/get_probes_results" value="get_probes_results">
+                      <input type="submit" formaction="/get_snmp_information" value="get_snmp_information"> <br><br>
+                      <input type="submit" formaction="/get_route_to" value="get_route_to">
+                      <input type="submit" formaction="/traceroute" value="traceroute"> <br><br>
+                      <input type="submit" formaction="/get_running_config" value="get_running_config">
+                      <input type="submit" formaction="/get_candidate_config" value="get_candidate_config"> <br><br>
+                  </form>
+                  </ul>
+        </div>
+      </div>
+  </body>
+ </html>
+    
